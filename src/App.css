@@ -53,3 +53,12 @@
   font-weight: 600 !important;
   cursor: pointer;
 }
+.product-style{
+  font-size: small;
+  color: grey;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

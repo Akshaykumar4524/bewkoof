@@ -6,7 +6,7 @@ import banner from '../assets/banner.png'
 const Banner = () => {
     return (
         <Grid>
-            <img alt='banner' width='100%' height={'250px'} src={banner} />
+            <img alt='banner' width='100%' height={'auto'} src={banner} />
         </Grid>
     )
 }

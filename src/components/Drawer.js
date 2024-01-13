@@ -1,19 +1,11 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
-import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+import Filter from './Filter';
 
 export default function TemporaryDrawer({ handleClose }) {
     const [state, setState] = React.useState({
-        left: true
+        bottom: true
     });
 
     const toggleDrawer = (anchor, open) => (event) => {
@@ -27,31 +19,23 @@ export default function TemporaryDrawer({ handleClose }) {
 
     const list = (anchor) => {
         return <Box
-            sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+            sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250,height:'550px' }}
             role="presentation"
             onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
         >
-            <List>
-                {['Men', 'Women', 'Accessories'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                        <ListItemButton>
-                            <ListItemText primary={text} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
-            </List>
+            <Filter/>
         </Box>
 
     };
 
     return (
         <Drawer
-            anchor={'left'}
-            open={state['left']}
-            onClose={toggleDrawer('left', false)}
+            anchor={'bottom'}
+            open={state['bottom']}
+            onClose={toggleDrawer('bottom', false)}
         >
-            {list('left')}
+            {list('bottom')}
         </Drawer>
     );
 }

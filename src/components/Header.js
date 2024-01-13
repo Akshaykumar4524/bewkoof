@@ -2,36 +2,37 @@ import { Grid, InputAdornment, TextField, Typography } from '@mui/material'
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { SearchOutlined } from '@mui/icons-material';
 import { useMediaQuery } from "@mui/material";
-import MenuIcon from '@mui/icons-material/Menu';
-import TemporaryDrawer from './Drawer';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 
 const Header = () => {
 
     const isNonMobileScreens = useMediaQuery("(min-width:1060px)");
-    const isMobileScreens = useMediaQuery("(max-width:685px)")
+    const isMobileScreens = useMediaQuery("(max-width:768px)")
     const isMediumScreens = !(isMobileScreens || isNonMobileScreens)
 
-    const [drawerOpen, setDrawerOpen] = useState(false)
-
-    useEffect(() => {
-        if (!isMobileScreens) {
-            setDrawerOpen(false)
-        }
-    }, [isMobileScreens])
 
     return (
         <>
             <Grid className='header-container'>
                 <Grid className='header-left'>
-                    {isMobileScreens && <MenuIcon onClick={() => setDrawerOpen(true)} />}
-                    <Typography className='logo'>Bewkoof</Typography>
+                    {isMobileScreens &&
+                        <Grid display={'flex'} alignItems={'center'} gap={'7px'}>
+                            <ArrowBackIosNewIcon />
+                            <Grid>
+                                <Typography sx={{ fontSize: 'x-small', fontWeight: 600 }}>Men's Boyfriend Tshir...</Typography>
+                                <Typography sx={{ fontSize: 'xx-small', color: 'grey' }}>807 items</Typography>
+                            </Grid>
+                        </Grid>
+                    }
+
                     {
                         (isNonMobileScreens || isMediumScreens) &&
                         <>
+                            <Typography className='logo'>Bewkoof</Typography>
                             <Typography className='sections'>Men</Typography>
                             <Typography className='sections'>Women</Typography>
                             <Typography className='sections'>Accessories</Typography>
@@ -73,7 +74,6 @@ const Header = () => {
                     </Grid>
                 </Grid>
             </Grid>
-            {drawerOpen && <TemporaryDrawer handleClose={() => setDrawerOpen(false)} />}
         </>
     )
 }
