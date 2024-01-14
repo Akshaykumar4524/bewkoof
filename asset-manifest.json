@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "https://akshaykumar4524.github.io/bewkoof/static/css/main.ba82b532.css",
-    "main.js": "https://akshaykumar4524.github.io/bewkoof/static/js/main.b6165e96.js",
+    "main.js": "https://akshaykumar4524.github.io/bewkoof/static/js/main.e45d0ac0.js",
     "static/js/787.899eb191.chunk.js": "https://akshaykumar4524.github.io/bewkoof/static/js/787.899eb191.chunk.js",
     "static/media/banner.png": "https://akshaykumar4524.github.io/bewkoof/static/media/banner.e70b17dc9ee43deedcd4.png",
     "static/media/visa1.png": "https://akshaykumar4524.github.io/bewkoof/static/media/visa1.96d2f12ebb0e1e054e3d.png",
@@ -30,11 +30,11 @@
     "static/media/logo.svg": "https://akshaykumar4524.github.io/bewkoof/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "https://akshaykumar4524.github.io/bewkoof/index.html",
     "main.ba82b532.css.map": "https://akshaykumar4524.github.io/bewkoof/static/css/main.ba82b532.css.map",
-    "main.b6165e96.js.map": "https://akshaykumar4524.github.io/bewkoof/static/js/main.b6165e96.js.map",
+    "main.e45d0ac0.js.map": "https://akshaykumar4524.github.io/bewkoof/static/js/main.e45d0ac0.js.map",
     "787.899eb191.chunk.js.map": "https://akshaykumar4524.github.io/bewkoof/static/js/787.899eb191.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ba82b532.css",
-    "static/js/main.b6165e96.js"
+    "static/js/main.e45d0ac0.js"
   ]
 }
