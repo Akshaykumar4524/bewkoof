@@ -4,6 +4,7 @@ import SortIcon from '@mui/icons-material/Sort';
 import ProductCard from './ProductCard';
 import { products } from '../data/Products';
 import SortBy from './SortBy';
+import ScrollToTopButton from './ScrolltoTopButton';
 
 const Products = () => {
     const isNonMobileScreens = useMediaQuery("(min-width:769px)");
@@ -45,6 +46,7 @@ const Products = () => {
                     })
                 }
             </Grid>
+            <ScrollToTopButton/>
         </Grid>
     )
 }
