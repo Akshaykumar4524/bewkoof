@@ -5,9 +5,7 @@ import { FilterData } from '../data/FilterData'
 
 
 const Filter = () => {
-    const isNonMobileScreens = useMediaQuery("(min-width:769px)");
     const isMobileScreens = useMediaQuery("(max-width:768px)")
-    const isMediumScreens = !(isMobileScreens || isNonMobileScreens)
     return (
         <Grid mt={'8px'} p={isMobileScreens?'10px':''} >
             <Grid display={'flex'} justifyContent={'space-between'}>

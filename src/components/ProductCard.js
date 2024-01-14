@@ -3,9 +3,7 @@ import { Chip, Grid, Typography, useMediaQuery } from '@mui/material'
 import React from 'react'
 const ProductCard = ({ product }) => {
   const { image, brandName, rate, rating, totalrating, material, label, prodName } = product;
-  const isNonMobileScreens = useMediaQuery("(min-width:769px)");
   const isMobileScreens = useMediaQuery("(max-width:768px)")
-  const isMediumScreens = !(isMobileScreens || isNonMobileScreens)
   const color = {
     'Buy 1 Get 1': 'white',
     'Few Left': 'white',

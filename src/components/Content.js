@@ -10,9 +10,7 @@ import FilterListIcon from '@mui/icons-material/FilterList';
 const Content = () => {
     const [isFilterOpen, setIsFilterOpen] = useState(false)
 
-    const isNonMobileScreens = useMediaQuery("(min-width:769px)");
     const isMobileScreens = useMediaQuery("(max-width:768px)")
-    const isMediumScreens = !(isMobileScreens || isNonMobileScreens)
 
     useEffect(() => {
         if (!isMobileScreens) {
